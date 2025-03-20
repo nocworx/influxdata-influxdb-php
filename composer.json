@@ -1,5 +1,5 @@
 {
-    "name": "mocworx/influxdata-influxdb-php",
+    "name": "nocworx/influxdata-influxdb-php",
     "description": "InfluxDB client library for PHP - NocWorx Fork",
     "license": "MIT",
     "keywords": [
