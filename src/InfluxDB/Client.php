@@ -269,7 +269,16 @@ class Client
      */
     public static function fromDSN($dsn, $timeout = 0, $verifySSL = false, $connectTimeout = 0)
     {
-        $connParams = parse_url($dsn);
+
+        $encodedUrl = preg_replace_callback(
+          '/:\/\/([^:@]+):([^@]+)@/',
+          function ($matches) {
+            return '://' . urlencode($matches[1]) . ':' . urlencode($matches[2]) . '@';
+          },
+          $dsn
+        );
+
+        $connParams = parse_url($encodedUrl);
 
         if ($connParams === false) {
             throw new ClientException('Unable to parse the InfluxDB DSN');
