@@ -1,6 +1,6 @@
 {
-    "name": "influxdb/influxdb-php",
-    "description": "InfluxDB client library for PHP",
+    "name": "mocworx/influxdata-influxdb-php",
+    "description": "InfluxDB client library for PHP - NocWorx Fork",
     "license": "MIT",
     "keywords": [
         "influxdb",
@@ -23,6 +23,10 @@
         {
             "name": "Gianluca Arbezzano",
             "email": "gianarb92@gmail.com"
+        },
+        {
+            "name": "Dave Mednick",
+            "email": "david.mednick@nexcess.net"
         }
     ],
     "require": {
